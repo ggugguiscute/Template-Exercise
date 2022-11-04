@@ -17,6 +17,9 @@
 
     <!-------------- Main Style ------------>
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!-------------- Media Style ------------>
+    <link rel="stylesheet" href="/css/media.css" />
     <title>Welcome || Plant Shop</title>
   </head>
   <body>
@@ -186,8 +189,10 @@
         <!----------------End of Step Section--------------->
         <section class="product" id="product">
           <div class="container product-content">
-            <div class="product-title title-center">
-              <h2>Check out our<br />products</h2>
+            <div class="">
+              <h2 class="section-title title-center">
+                Check out our<br />products
+              </h2>
             </div>
             <p class="product-desc">
               Here are some selected plants from our showroom,<br />
@@ -262,6 +267,126 @@
             </div>
           </div>
         </section>
+        <!----------------End of Product Section--------------->
+        <section class="qna" id="qna">
+          <div class="container" id="qna-content">
+            <h2 class="section-title">
+              Some common questions<br />
+              were often asked
+            </h2>
+            <div class="qna-boxes">
+              <div class="qna-box active">
+                <div class="qna-header">
+                  <i class="ri-add-line"></i>
+                  <h3 class="qna-title">
+                    My Flowers are falling off or dying?
+                  </h3>
+                </div>
+                <div class="qna-answer">
+                  <p class="answer-desc">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable.
+                  </p>
+                </div>
+              </div>
+              <!---------End of Each Questions------------>
+              <div class="qna-box">
+                <div class="qna-header">
+                  <i class="ri-add-line"></i>
+                  <h3 class="qna-title">How do I choose a plant?</h3>
+                </div>
+              </div>
+              <!---------End of Each Questions------------>
+              <div class="qna-box">
+                <div class="qna-header">
+                  <i class="ri-add-line"></i>
+                  <h3 class="qna-title">What causes leaves to become pale?</h3>
+                </div>
+              </div>
+              <!---------End of Each Questions------------>
+            </div>
+          </div>
+        </section>
+        <!----------------End of QNA Section--------------->
+        <section class="contact" id="contact">
+          <div class="container contact-contents">
+            <div class="company-info">
+              <h2 class="section-title">
+                Reach out to us today <br />via any of the given<br />
+                information
+              </h2>
+              <div class="contact-tel txt">
+                <h3>Call us for instant support</h3>
+                <span><i class="ri-phone-line"></i> +999 888 7777</span>
+              </div>
+              <div class="contact-email txt">
+                <h3>Write us by mail</h3>
+                <span><i class="ri-mail-line"></i> user@email.com</span>
+              </div>
+            </div>
+            <div class="input-info">
+              <form action="abc.php" method="get" class="form">
+                <!--!!!!!!!!!!!!!!!!!!!!!!여기!!!!!!!!!!!!!!!!!!!-->
+                <p class="input-email">
+                  <input type="text" placeholder="Email" />
+                </p>
+                <p class="input-subject">
+                  <input type="text" placeholder="subject" />
+                </p>
+                <p class="input-msg">
+                  <textarea name="" id="" placeholder="Message"></textarea>
+                </p>
+                <button type="submit" class="button">
+                  Send Message
+                  <i class="ri-arrow-right-up-line"></i>
+                </button>
+                <!-- <input type="submit" class="button" /> -->
+                <!--input 태그는 자식을 둘 수 없기 때문에, 아이콘과 같은 자식 요소가 필요한 경우 버튼을 사용한다.-->
+              </form>
+            </div>
+          </div>
+        </section>
+        <!----------------End of Contact Section--------------->
+        <footer class="footer" id="footer">
+          <div class="container footer-contents">
+            <div class="footer-item">
+              <a href="#" class="nav-logo">
+                <i class="ri-leaf-line nav-logo-icon"></i> Plantex
+              </a>
+              <h3 class="footer-title">
+                Subscribe to our newsletter to stay update
+              </h3>
+              <div class="btn-box">
+                <em>Enter your email</em>
+                <a href="#" class="button"
+                  >Subscribe<i class="ri-arrow-right-up-line"></i
+                ></a>
+              </div>
+            </div>
+            <div class="footer-item">
+              <h3 class="footer-title">Our Address</h3>
+              <div class="footer-txt">
+                <p>1234 - Peru</p>
+                <p>La Libertad - 43210</p>
+                <p>123-456-7890</p>
+              </div>
+            </div>
+            <div class="footer-item">
+              <h3 class="footer-title">Contact Us</h3>
+              <div class="footer-txt">
+                <p>+999 888 7777</p>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+              </div>
+            </div>
+            <div class="footer-item">
+              <h3 class="footer-title">We accept all credit cards</h3>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   </body>

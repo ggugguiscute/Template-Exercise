@@ -173,7 +173,8 @@ section {
   justify-content: space-between;
 }
 
-.header .nav-logo {
+.header .nav-logo,
+.footer .nav-logo {
   color: var(--title-color);
   font-size: 1.15rem;
   display: flex;
@@ -184,7 +185,8 @@ section {
   padding: 1.25rem 0;
 }
 
-.header .nav-logo .nav-logo-icon {
+.header .nav-logo .nav-logo-icon,
+.footer .nav-logo .nav-logo-icon {
   color: var(--first-color);
 }
 
@@ -534,159 +536,174 @@ section {
 .product-boxes .product-box .product-image .item-circle {
   position: absolute;
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 7rem;
+  height: 7rem;
   background: var(--first-color-lighten);
   border-radius: 50%;
   transform: translateX(-30px);
 }
 
+.product-boxes .product-box .product-image:hover img {
+  transform: translate(30px, -30px);
+}
+
 .product-boxes .product-box .product-image img {
   width: 60%;
   transform: translateX(30px);
+  transition: all 0.3s ease;
+}
+/*============ 5. QNA Style ============*/
+.qna {
+  background: var(--first-color-lighten);
 }
 
-/*============ Media Query Style ============*/
-@media screen and (max-width: 1024px) {
-  /*============ Common Style ============*/
-  .container {
-    padding: 0 1rem;
-  }
-  .home {
-    padding: 10rem 0 3rem;
-  }
-  .home .home-contents .home-title {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
-  .step .step-box {
-    padding: 1.5rem;
-  }
+.qna .qna-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1rem;
+  margin: 2.5rem 0;
+  align-items: flex-start;
 }
 
-@media screen and (max-width: 768px) {
-  /*============ Common Style ============*/
-  .button {
-    font-size: var(--small-font-size);
-    margin: 2rem auto 0;
-  }
-  section {
-    padding: 4rem 0 1rem;
-  }
-  .section-title {
-    text-align: center;
-  }
-  /*============ Header Style ============*/
-  .header .nav-menu .nav-list {
-    display: none;
-  }
-  .header .nav-menu .nav-btns {
-    column-gap: 1rem;
-  }
-  .header .nav-menu .nav-icon.menu-icon {
-    display: flex;
-  }
-  .home .home-contents {
-    /*============ Home Style ============*/
-    flex-wrap: wrap;
-  }
-  .home .home-contents > .home-box {
-    width: 100%;
-  }
-  .home .home-contents > .home-box.home-txt {
-    order: 2;
-  }
-  .home .home-contents .home-title {
-    font-size: var(--big-font-size);
-    line-height: 3rem;
-    text-align: center;
-  }
-  .home .home-contents .home-desc {
-    width: 60%;
-    text-align: center;
-    margin: auto;
-  }
-  .home .home-contents > .home-box.home-image {
-    order: 1;
-    margin-bottom: 2rem;
-  }
-  .home .home-contents > .home-box.home-image img {
-    width: 280px;
-  }
-  /*============ About Style ============*/
-  .about .about-contents {
-    flex-wrap: wrap;
-  }
-  .about-contents .about-box {
-    width: 100%;
-  }
-  .about-contents .about-image > img {
-    width: 280px;
-  }
-  .about .about-contents .about-txt {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-  .about .about-txt .about-desc {
-    width: 60%;
-    text-align: center;
-    margin: 2rem auto;
-  }
-  .about .about-txt .about-details {
-    width: 60%;
-    margin: auto;
-  }
-  .about .about-txt .about-btn {
-    justify-content: center;
-  }
-  /*============ Step Style ============*/
-  .step .step-boxes {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
-  .step .step-box {
-    width: calc(50% - 0.5rem);
-  }
+.qna .qna-box {
+  background: #fff;
+  width: calc(50% - 0.5rem);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.qna .qna-box:hover {
+  box-shadow: 0 0 8px #bfbfbf;
 }
 
-@media screen and (max-width: 480px) {
-  /*============ Step Style ============*/
-  .step .step-boxes {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-
-  .step .step-box {
-    width: 100%;
-  }
+.qna .qna-header {
+  display: flex;
+  padding: 1rem;
 }
 
-@media screen and (max-width: 420px) {
-  /*============ Home Style ============*/
-  .home .home-contents .home-title {
-    font-size: var(--h1-font-size);
-    line-height: 2rem;
-    text-align: center;
-  }
-  .home .home-contents .home-desc {
-    width: 70%;
-    font-size: var(--small-font-size);
-  }
-  .home .home-contents > .home-box.home-image img {
-    width: 240px;
-  }
-  /*============ About Style ============*/
-  .about .about-txt .about-desc {
-    width: 70%;
-    margin: 2rem auto;
-    font-size: var(--small-font-size);
-  }
-  .about .about-txt .about-details {
-    row-gap: 0.3rem;
-  }
+.qna .qna-header i {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: 0.5rem;
 }
+
+.qna .qna-header h3 {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+.qna .qna-answer {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--small-font-size);
+  _display: none;
+}
+.qna .qna-box.active {
+  background: var(--first-color);
+}
+.qna .qna-box.active .qna-header i,
+.qna .qna-box.active .qna-header h3,
+.qna .qna-box.active .qna-answer {
+  color: #fff;
+}
+
+/*============ 6. Contact Style ============*/
+.contact .contact-contents {
+  display: flex;
+}
+
+.contact .company-info {
+  width: 45%;
+}
+.contact .input-info {
+  width: 65%;
+  _background: #dedede;
+  padding: 0 0 0 3rem;
+}
+.contact div.txt h3 {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+.contact div.txt span {
+  display: flex;
+  align-items: center;
+}
+
+.contact .contact-tel {
+  margin: 2rem 0;
+}
+
+.contact .form {
+  padding: 1rem;
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: column;
+}
+.contact .form p {
+  width: 100%;
+}
+.contact .form p input,
+.contact .form p textarea {
+  width: 100%;
+  padding: 0 0 1rem 0;
+  border: none;
+  border-bottom: 1px solid var(--text-color-light);
+  color: var(--text-color);
+  resize: none;
+  outline: 0;
+}
+
+.contact .form p textarea {
+  height: 10rem;
+}
+/*============ 7. Footer Style ============*/
+.footer .footer-contents {
+  display: flex;
+}
+.footer .footer-item {
+  _border: 1px solid;
+  width: 25%;
+}
+.footer .footer-item:nth-child(1) {
+  width: 30%;
+}
+.footer .nav-logo {
+  padding: 0;
+}
+.footer .footer-title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.footer .footer-item:nth-child(1) .footer-title {
+  margin: 2rem 0 1.5rem;
+}
+.footer .footer-item:not(:first-child) {
+  /*여기*/
+  padding-left: 2rem;
+}
+.footer .btn-box {
+  display: flex;
+  padding: 0.5rem;
+  background: var(--first-color-lighten);
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+.footer .btn-box em {
+  font-size: var(--small-font-size);
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.footer .btn-box .button {
+  margin: 0;
+  font-size: var(--small-font-size);
+  padding: 1rem;
+}
+
 /*============ Memo ============*/
 /* 1. 박스, 텍스트, 그림자 효과 */
 .box {
