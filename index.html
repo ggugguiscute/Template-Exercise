@@ -330,13 +330,21 @@
               <form action="abc.php" method="get" class="form">
                 <!--!!!!!!!!!!!!!!!!!!!!!!여기!!!!!!!!!!!!!!!!!!!-->
                 <p class="input-email">
-                  <input type="text" placeholder="Email" />
+                  <input type="text" placeholder=" " class="input" />
+                  <label for="input">Email</label>
                 </p>
                 <p class="input-subject">
-                  <input type="text" placeholder="subject" />
+                  <input type="text" placeholder=" " class="input" />
+                  <label for="input">Subject</label>
                 </p>
                 <p class="input-msg">
-                  <textarea name="" id="" placeholder="Message"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder=" "
+                    class="input"
+                  ></textarea>
+                  <label for="">Message</label>
                 </p>
                 <button type="submit" class="button">
                   Send Message
@@ -377,16 +385,34 @@
               <h3 class="footer-title">Contact Us</h3>
               <div class="footer-txt">
                 <p>+999 888 7777</p>
-                <a href="#"><i class="ri-facebook-fill"></i></a>
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <div class="footer-social-box">
+                  <a href="#" class="footer-social-link"
+                    ><i class="ri-facebook-fill"></i
+                  ></a>
+                  <a href="#" class="footer-social-link"
+                    ><i class="ri-instagram-fill"></i
+                  ></a>
+                  <a href="#" class="footer-social-link"
+                    ><i class="ri-twitter-fill"></i
+                  ></a>
+                </div>
               </div>
             </div>
             <div class="footer-item">
               <h3 class="footer-title">We accept all credit cards</h3>
+              <div class="footer-card-box">
+                <a href="#"><img src="/img/card1.png" alt="" /></a>
+                <a href="#"><img src="/img/card2.png" alt="" /></a>
+                <a href="#"><img src="/img/card3.png" alt="" /></a>
+                <a href="#"><img src="/img/card4.png" alt="" /></a>
+              </div>
             </div>
           </div>
+          <div class="copy">
+            <p>&copy; Vom Academy All rights reserved.</p>
+          </div>
         </footer>
+        <!----------------End of Contact Section--------------->
       </main>
     </div>
   </body>
