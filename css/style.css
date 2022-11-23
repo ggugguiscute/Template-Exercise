@@ -606,6 +606,7 @@ footer {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-right: 0.5rem;
+  transition: all 0.3s;
 }
 
 .qna .qna-header h3 {
@@ -615,17 +616,31 @@ footer {
 }
 .qna .qna-answer {
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: var(--small-font-size);
   _display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 .qna .qna-box.active {
   background: var(--first-color);
 }
+
+.qna .qna-box.active .qna-header i {
+  transform: rotate(135deg);
+}
+
 .qna .qna-box.active .qna-header i,
 .qna .qna-box.active .qna-header h3,
 .qna .qna-box.active .qna-answer {
   color: #fff;
+}
+
+.qna .qna-box.active .qna-answer {
+  _display: block;
+  height: auto;
+  padding: 1rem;
 }
 
 /*============ 6. Contact Style ============*/
